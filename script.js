@@ -136,7 +136,7 @@
   document.querySelectorAll("[data-count]").forEach(function (el) { cio.observe(el); });
 
   /* ------------------------------------------------------------------
-     6. Service record tabs (employees / managers)
+     6. System photo tabs (employees / managers)
      ------------------------------------------------------------------ */
   document.querySelectorAll("[data-apptab]").forEach(function (tab) {
     tab.addEventListener("click", function () {
@@ -147,7 +147,7 @@
       tab.classList.add("is-active");
       tab.setAttribute("aria-selected", "true");
       var key = tab.dataset.apptab;
-      document.querySelectorAll(".report").forEach(function (s) {
+      document.querySelectorAll(".shot").forEach(function (s) {
         s.classList.toggle("is-active", s.dataset.screen === key);
       });
     });
