@@ -17,6 +17,7 @@
   };
   var currentLang = "ar";
   var currentPlan = "";
+  var currentService = null;   // { ar, en } read off the clicked service card
 
   function applyLang(lang) {
     currentLang = lang;
@@ -195,6 +196,7 @@
   var leadSuccess = document.getElementById("leadSuccess");
   var planField = document.getElementById("planField");
   var planBadge = document.getElementById("modalPlanBadge");
+  var planLabel = document.getElementById("modalPlanLabel");
   var planName = document.getElementById("modalPlanName");
   var planPrice = document.getElementById("modalPlanPrice");
 
@@ -203,15 +205,22 @@
     var p = PLANS[currentPlan];
     if (p) {
       planBadge.hidden = false;
+      planLabel.textContent = currentLang === "en" ? "Selected package" : "الباقة المختارة";
       planName.textContent = currentLang === "en" ? p.en : p.ar;
       planPrice.textContent = p.price + (currentLang === "en" ? " SAR / month" : " ر.س / شهريًا");
+    } else if (currentService) {
+      planBadge.hidden = false;
+      planLabel.textContent = currentLang === "en" ? "Selected service" : "الخدمة المطلوبة";
+      planName.textContent = currentLang === "en" ? currentService.en : currentService.ar;
+      planPrice.textContent = "";
     } else {
       planBadge.hidden = true;
     }
   }
 
-  function openModal(plan) {
+  function openModal(plan, service) {
     currentPlan = plan || "";
+    currentService = service || null;
     if (planField) planField.value = currentPlan;
     updatePlanBadge();
     leadGrid.hidden = false;
@@ -231,7 +240,12 @@
   document.querySelectorAll("[data-open-lead]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       closeMenu();
-      openModal(btn.dataset.plan || "");
+      var service = null;
+      if (btn.hasAttribute("data-service")) {
+        var h = btn.closest(".svc").querySelector("h3");
+        service = { ar: h.dataset.ar || h.textContent, en: h.dataset.en };
+      }
+      openModal(btn.dataset.plan || "", service);
     });
   });
   modal.querySelectorAll("[data-close]").forEach(function (el) {
