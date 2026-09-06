@@ -127,8 +127,8 @@ strong { font-weight: 600; }
    3. LAYOUT PRIMITIVES
    -------------------------------------------------------------------------- */
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: clamp(1.15rem, 4vw, 3rem); }
-.section { padding-block: clamp(2.25rem, 4.2vw, 3.75rem); position: relative; }
-.section--tight { padding-block: clamp(1.4rem, 2.6vw, 2.1rem); }
+.section { padding-block: clamp(3.25rem, 6.5vw, 6rem); position: relative; }
+.section--tight { padding-block: clamp(2rem, 4vw, 3.25rem); }
 .section--subtle { background: var(--paper-warm); }
 .section--warm { background: var(--paper-warm); }
 
@@ -140,7 +140,7 @@ strong { font-weight: 600; }
 .section--red .mark { background: #fff; }
 
 /* Section heads are left-aligned and rule-led — the editorial default */
-.section-head { max-width: 60ch; margin-bottom: clamp(1.5rem, 2.8vw, 2.25rem); }
+.section-head { max-width: 60ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
 .section-head--start { margin-inline: 0; }
 .lead { font-size: var(--text-lg); color: var(--text-2); margin-top: .95rem; font-weight: 300; }
 
@@ -625,19 +625,19 @@ html[lang="en"] .tamara__logo--ar { display: none; }
 .tamara__points svg { width: 15px; height: 15px; color: var(--red-600); flex-shrink: 0; margin-top: 6px; }
 
 .tamara__card { background: var(--paper); border: 1px solid var(--rule-strong); border-radius: var(--r-md); padding: clamp(1.4rem, 3vw, 1.9rem); }
-/* card head removed with the prices */
 .tamara__card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule); }
 .tamara__card-head span { font-size: var(--text-xs); color: var(--text-3); font-weight: 400; }
 .tamara__card-head b { font-size: var(--text-h4); font-weight: 600; color: var(--ink-900); white-space: nowrap; }
 .tamara__card-head b i { font-style: normal; font-size: .72em; color: var(--text-3); font-family: var(--font); font-weight: 400; }
 
 .tamara__split { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 1.3rem; border: 1px solid var(--rule); }
-.tsplit { display: grid; justify-items: center; gap: .4rem; padding: 1.05rem .3rem 1rem; }
+.tsplit { display: grid; justify-items: center; gap: .15rem; padding: .9rem .3rem .8rem; }
 .tsplit + .tsplit { border-inline-start: 1px solid var(--rule); }
-.tsplit__n { font-size: .98rem; font-weight: 600; font-family: var(--font-en); color: var(--ink-900); line-height: 1; }
+.tsplit__n { font-size: .66rem; font-weight: 600; font-family: var(--font-en); color: var(--text-3); letter-spacing: .06em; }
 .tsplit:first-child { background: var(--red-50); }
 .tsplit:first-child .tsplit__n { color: var(--red-600); }
-.tsplit small { font-size: .7rem; color: var(--text-3); }
+.tsplit b { font-size: 1.05rem; font-weight: 600; color: var(--ink-900); line-height: 1.25; }
+.tsplit small { font-size: .66rem; color: var(--text-3); }
 
 .tamara__bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: .25rem; margin-top: .7rem; }
 .tamara__bar i { height: 3px; background: var(--rule); }
@@ -926,22 +926,3 @@ html[dir="rtl"] .footer h4 { letter-spacing: 0; text-transform: none; font-size:
   .modal__aside { text-align: center; align-items: center; }
   .modal__aside .brand--light svg { margin-inline: auto; }
 }
-
-/* --------------------------------------------------------------------------
-   25. MERGED BLOCK — the cloud system now sits inside the compliance plate
-   -------------------------------------------------------------------------- */
-.merge-rule { height: 1px; background: rgba(255,255,255,.26); margin-block: clamp(2.25rem, 4.5vw, 3.5rem); }
-.subhead { font-size: var(--text-h2); line-height: 1.2; font-weight: 600; letter-spacing: -.015em; }
-
-.section--red .subhead { color: #fff; }
-.section--red .app-card { border-inline-start-color: #fff; }
-.section--red .app-card h3 { color: #fff; }
-.section--red .app-card p { color: rgba(255,255,255,.82); }
-.section--red .app__list li { color: rgba(255,255,255,.86); border-top-color: rgba(255,255,255,.26); }
-.section--red .app__list li:last-child { border-bottom-color: rgba(255,255,255,.26); }
-.section--red .app__list svg { color: #ffd9a8; }
-.section--red .modules__tabs { border-color: rgba(255,255,255,.42); }
-.section--red .mtab { color: rgba(255,255,255,.84); }
-.section--red .mtab + .mtab { border-inline-start-color: rgba(255,255,255,.42); }
-.section--red .mtab:hover { color: #fff; }
-.section--red .mtab.is-active { background: #fff; color: var(--red-plate); }
