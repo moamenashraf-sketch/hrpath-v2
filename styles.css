@@ -938,3 +938,12 @@ html[dir="rtl"] .footer h4 { letter-spacing: 0; text-transform: none; font-size:
 .section--red .mtab + .mtab { border-inline-start-color: rgba(255,255,255,.42); }
 .section--red .mtab:hover { color: #fff; }
 .section--red .mtab.is-active { background: #fff; color: var(--red-plate); }
+
+/* --------------------------------------------------------------------------
+   25. CENTRED SECTION HEAD + FAQ PACKAGE LINES
+   -------------------------------------------------------------------------- */
+.section-head--center { text-align: center; margin-inline: auto; }
+.section-head--center .eyebrow { justify-content: center; }
+.acc__panel-inner .pkg { display: block; }
+.acc__panel-inner .pkg + .pkg { margin-top: .65rem; }
+.acc__panel-inner .pkg b { color: var(--ink-900); font-weight: 600; }
