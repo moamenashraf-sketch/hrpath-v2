@@ -13,7 +13,8 @@
   var PLANS = {
     expert: { ar: "خبير — باقة إسناد", en: "Expert — Esnad", price: "2,500" },
     basic:  { ar: "الأساسية",          en: "Basic",          price: "3,900" },
-    gold:   { ar: "الذهبية",           en: "Gold",           price: "4,900" }
+    gold:   { ar: "الذهبية",           en: "Gold",           price: "4,900" },
+    moeen:  { ar: "معين",              en: "Moeen",          price: "3,000" }
   };
   var currentLang = "ar";
   var currentPlan = "";
@@ -139,6 +140,30 @@
   /* ------------------------------------------------------------------
      6. System photo tabs (employees / managers)
      ------------------------------------------------------------------ */
+  // The checklist under the tabs is rewritten per audience. The spans carry
+  // data-ar/data-en so applyLang() keeps them in step with the language toggle.
+  var APP_LISTS = {
+    emp: [
+      { ar: "طلبات الإجازات والأرصدة بضغطة واحدة", en: "Leave requests &amp; balances in one tap" },
+      { ar: "قسائم الرواتب والخطابات ذاتية الخدمة", en: "Self-service payslips &amp; letters" },
+      { ar: "تحديث البيانات الشخصية ومتابعة الطلبات", en: "Update personal details &amp; track requests" }
+    ],
+    mgr: [
+      { ar: "الموافقة على الطلبات من مكان واحد", en: "Approve requests from one place" },
+      { ar: "لوحات متابعة مباشرة لأداء الفريق", en: "Live dashboards for team performance" },
+      { ar: "تقارير الحضور والإجازات للفريق", en: "Team attendance &amp; leave reports" }
+    ]
+  };
+  function renderAppList(key) {
+    var list = document.querySelector(".app__list");
+    var items = APP_LISTS[key];
+    if (!list || !items) return;
+    list.innerHTML = items.map(function (it) {
+      return '<li><svg><use href="#i-check"/></svg> <span data-ar="' + it.ar + '" data-en="' + it.en + '">' +
+        (currentLang === "en" ? it.en : it.ar) + "</span></li>";
+    }).join("");
+  }
+
   document.querySelectorAll("[data-apptab]").forEach(function (tab) {
     tab.addEventListener("click", function () {
       document.querySelectorAll("[data-apptab]").forEach(function (t) {
@@ -151,6 +176,7 @@
       document.querySelectorAll(".shot").forEach(function (s) {
         s.classList.toggle("is-active", s.dataset.screen === key);
       });
+      renderAppList(key);
     });
   });
 
