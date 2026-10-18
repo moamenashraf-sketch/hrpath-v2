@@ -973,7 +973,7 @@ html[dir="ltr"] .field input[type="tel"] { text-align: left; }
 .moeen__side .plan__list svg { color: #ffd9a8; }
 .moeen__side .plan__cta { margin-top: auto; background: #fff; border-color: #fff; color: var(--red-600); font-weight: 700; }
 .moeen__side .plan__cta:hover { background: #ffd9a8; border-color: #ffd9a8; color: #7a1014; }
-@keyframes mx-twinkle { from { opacity: .4; } to { opacity: 1; } }
+@keyframes mx-twinkle { from { opacity: .3; } to { opacity: .65; } }
 @media (prefers-reduced-motion: no-preference) {
   .moeen__fx .tw { animation: mx-twinkle 3.2s ease-in-out infinite alternate; }
 }
@@ -991,3 +991,4 @@ html[dir="ltr"] .field input[type="tel"] { text-align: left; }
    -------------------------------------------------------------------------- */
 .hero--anniv .hero__scrim { background: linear-gradient(180deg, rgba(20,4,6,.34) 0%, rgba(20,4,6,.16) 45%, rgba(20,4,6,.46) 100%); }
 .hero--anniv .accent { color: #ffd9a8; }
+html[dir="ltr"] .moeen__title h3 { font-size: clamp(2.8rem, 6.4vw, 5.2rem); }
