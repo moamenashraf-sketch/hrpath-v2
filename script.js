@@ -284,6 +284,18 @@
   /* ------------------------------------------------------------------
      10. Forms (modal + inline lead-gen)
      ------------------------------------------------------------------ */
+  // Saudi mobile numbers only (05XXXXXXXX, 5XXXXXXXX, +9665XXXXXXXX, 9665XXXXXXXX);
+  // the browser's validation bubble follows the page language.
+  document.querySelectorAll("input[name='phone']").forEach(function (inp) {
+    inp.addEventListener("input", function () { inp.setCustomValidity(""); });
+    inp.addEventListener("invalid", function () {
+      var en = currentLang === "en";
+      inp.setCustomValidity(inp.validity.valueMissing
+        ? (en ? "Please enter your mobile number" : "يرجى إدخال رقم الجوال")
+        : (en ? "Enter a valid Saudi mobile number, e.g. 05XXXXXXXX" : "أدخل رقم جوال سعودي صحيحًا، مثل 05XXXXXXXX"));
+    });
+  });
+
   document.querySelectorAll("[data-leadform]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
