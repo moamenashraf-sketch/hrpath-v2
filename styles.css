@@ -992,3 +992,15 @@ html[dir="ltr"] .field input[type="tel"] { text-align: left; }
 .hero--anniv .hero__scrim { background: linear-gradient(180deg, rgba(20,4,6,.34) 0%, rgba(20,4,6,.16) 45%, rgba(20,4,6,.46) 100%); }
 .hero--anniv .accent { color: #ffd9a8; }
 html[dir="ltr"] .moeen__title h3 { font-size: clamp(2.8rem, 6.4vw, 5.2rem); }
+
+/* Anniversary hero: text column on the physical left, the outlined 10 on the right.
+   Phones keep the centred layout with the 10 faintly behind the text. */
+@media (min-width: 861px) {
+  .hero--anniv .hero__inner { align-items: flex-end; text-align: start; }
+  html[dir="ltr"] .hero--anniv .hero__inner { align-items: flex-start; }
+  .hero--anniv .hero__inner > * { width: 100%; max-width: min(54%, 600px); }
+  .hero--anniv .hero__cta { justify-content: flex-start; }
+}
+@media (max-width: 860px) {
+  .hero--anniv .hero__bg { object-position: 72% center; }
+}
