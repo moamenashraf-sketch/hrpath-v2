@@ -1015,3 +1015,8 @@ html[dir="ltr"] .moeen__title h3 { font-size: clamp(2.8rem, 6.4vw, 5.2rem); }
 .btn svg { flex-shrink: 0; }
 /* percent signs sit on the right of the number in Arabic */
 html[dir="rtl"] .stat b .pct { order: -1; }
+
+/* the plus sign: a little larger than the other units, and on the right of the number in Arabic */
+.stat b .plus { font-size: .52em; line-height: 1; }
+html[dir="ltr"] .stat b i + .plus { margin-inline-start: -.3rem; }
+html[dir="rtl"] .stat b .plus { order: -1; }
