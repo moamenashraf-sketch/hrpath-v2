@@ -11,7 +11,7 @@
      1. i18n — Arabic inline (default) / English via data-en attributes
      ------------------------------------------------------------------ */
   var PLANS = {
-    expert: { ar: "خبير — باقة إسناد", en: "Expert — Esnad", price: "2,500" },
+    expert: { ar: "خبير", en: "Expert", price: "2,500" },
     basic:  { ar: "الأساسية",          en: "Basic",          price: "3,900" },
     gold:   { ar: "الذهبية",           en: "Gold",           price: "4,900" },
     moeen:  { ar: "معين",              en: "Moeen",          price: "3,000" }

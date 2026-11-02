@@ -100,9 +100,13 @@
 
   <!-- ================================ HERO ============================== -->
   <section class="hero hero--anniv">
-    <img src="assets/img/hero-anniversary.svg" alt="" class="hero__bg" aria-hidden="true" />
+    <picture>
+      <source media="(max-width: 860px)" srcset="assets/img/hero-anniversary-mobile.svg" />
+      <img src="assets/img/hero-anniversary.svg" alt="" class="hero__bg" aria-hidden="true" />
+    </picture>
     <span class="hero__scrim" aria-hidden="true"></span>
     <div class="container hero__inner">
+      <img class="hero__ten" src="assets/img/hero-ten.svg" alt="" aria-hidden="true" width="330" height="300" />
       <span class="eyebrow"><i class="mark"></i> <span data-en="WE ARE HR — BUT DIFFERENT">نحن خبراء الموارد البشرية — برؤية تتجاوز المألوف</span></span>
       <h1><span data-en="Complete HR management —">إدارة كاملة للموارد البشرية —</span> <span class="accent" data-en="full compliance, higher efficiency, lower cost.">امتثال كامل، كفاءة أعلى، وتكلفة أقل.</span></h1>
       <p class="hero__sub" data-en="Professional HR services covering payroll, government relations, and compliance — with continuous peace of mind, so you can run your business with stability and sustainability.">خدمات موارد بشرية احترافية تغطي الرواتب والعلاقات الحكومية والامتثال — مع راحة بال مستمرة لتدير منشأتك بثبات واستدامة.</p>
@@ -111,7 +115,7 @@
         <a href="#packages" class="btn btn--ondark btn--lg" data-en="Explore packages">استكشف الباقات</a>
       </div>
       <dl class="hero__trust">
-        <div><dt data-en="15+ years of HR expertise">خبرة +15 سنة في الموارد البشرية</dt></div>
+        <div><dt data-en="10+ years of HR expertise">خبرة +10 سنوات في الموارد البشرية</dt></div>
         <div><dt data-en="100+ companies served">+100 شركة خدمناها</dt></div>
         <div><dt data-en="Full Saudi compliance">امتثال سعودي كامل</dt></div>
       </dl>
@@ -159,8 +163,8 @@
         <article class="stat reveal" data-d="1"><b><span data-count="6">0</span><i data-en="M+">مليون+</i></b><span data-en="Successful HR operations">عملية موارد بشرية ناجحة</span></article>
         <article class="stat reveal" data-d="2"><b><span data-count="200">0</span><i data-en="M SAR">مليون ريال</i></b><span data-en="Monthly payroll under direct management">رواتب شهرية تحت إدارة مباشرة</span></article>
         <article class="stat reveal" data-d="3"><b><span data-count="3000">0</span><i>+</i></b><span data-en="Employees managed directly">موظف بإدارة مباشرة</span></article>
-        <article class="stat reveal" data-d="4"><b><span data-count="97">0</span><i>%</i></b><span data-en="Client satisfaction rate">نسبة رضا العملاء</span></article>
-        <article class="stat reveal" data-d="1"><b><span data-count="80">0</span><i>%+</i></b><span data-en="Client retention rate">معدل استمرار العملاء معنا</span></article>
+        <article class="stat reveal" data-d="4"><b><span data-count="97">0</span><i class="pct">%</i></b><span data-en="Client satisfaction rate">نسبة رضا العملاء</span></article>
+        <article class="stat reveal" data-d="1"><b><span data-count="80">0</span><i class="pct">%</i><i>+</i></b><span data-en="Client retention rate">معدل استمرار العملاء معنا</span></article>
         <article class="stat reveal" data-d="2"><b><span data-count="65">0</span><i>+</i></b><span data-en="Clients in diverse sectors">عميل في قطاعات متنوعة</span></article>
       </div>
     </div>
@@ -339,7 +343,7 @@
     <div class="container">
       <div class="trio">
         <article class="trio__item reveal" data-d="1">
-          <h3 data-en="Based in Saudi Arabia 🇸🇦">فريق سعودي ميداني 🇸🇦</h3>
+          <h3 data-en="Based in Saudi Arabia">فريق سعودي ميداني</h3>
           <p data-en="Encrypted data, continuous monitoring and local field expertise that guarantees government compliance.">بيانات مشفرة ومراقبة مستمرة وخبرة ميدانية محلية تضمن الامتثال الحكومي الكامل.</p>
         </article>
         <article class="trio__item reveal" data-d="2">
@@ -387,7 +391,7 @@
         <div class="moeen__details">
           <div class="moeen__pricebox">
             <div class="moeen__price"><small data-en="Starting from">ابتداءً من</small><b>3,000</b><span><i data-en="SAR">ر.س</i> / <i data-en="month">شهريًا</i></span></div>
-            <p class="moeen__eff" data-en="With the free month, the effective cost is 2,250 SAR per month">مع الشهر المجاني تصبح التكلفة الفعلية 2,250 ر.س شهريًا</p>
+            <p class="moeen__eff" data-en="With the free months, the effective cost is 2,250 SAR per month">مع الأشهر المجانية تصبح التكلفة الفعلية 2,250 ر.س شهريًا</p>
           </div>
           <div class="moeen__offer">
             <h4 data-en="Free months by contract length">الأشهر المجانية حسب مدة العقد</h4>
@@ -400,7 +404,7 @@
           </div>
           <div class="moeen__side">
             <ul class="plan__list">
-              <li><svg><use href="#i-check"/></svg> <span data-en="No commitment period — end the contract with one month's notice">بدون مدة التزام — أنهِ العقد بإشعار مسبق قبل شهر</span></li>
+              <li><svg><use href="#i-check"/></svg> <span data-en="No commitment period — contract termination with one month's notice">بدون مدة التزام — إنهاء العقد بإشعار مسبق قبل شهر</span></li>
               <li><svg><use href="#i-check"/></svg> <span data-en="Annual-contract cashback: one month's value added to your account">كاش باك للعقد السنوي: قيمة شهر تضاف إلى حسابك</span></li>
               <li><svg><use href="#i-check"/></svg> <span data-en="4 hours of monthly contact with our team (two 2-hour sessions)">4 ساعات تواصل شهريًا مع فريقنا (جلستان من ساعتين)</span></li>
               <li><svg><use href="#i-check"/></svg> <span data-en="Payroll, employee relations and government platforms: Qiwa, Muqeem, GOSI, Mudad, HRDF">الرواتب وعلاقات الموظفين والمنصات الحكومية: قوى، مقيم، التأمينات، مدد، هدف</span></li>
@@ -414,7 +418,7 @@
         <!-- خبير -->
         <article class="plan reveal" data-d="1">
           <div class="plan__head">
-            <span class="plan__tag" data-en="Esnad package">باقة إسناد</span>
+            <span class="plan__tag" data-en="Package">باقة</span>
             <h3 data-en="Expert">خبير</h3>
             <p class="plan__desc" data-en="A dedicated HR specialist managing your cloud HR system — with monthly legal consulting.">مسؤول موارد بشرية مخصص يدير نظامك السحابي — مع استشارات قانونية شهرية.</p>
             <div class="plan__price"><b>2,500</b><span><i data-en="SAR">ر.س</i> / <i data-en="month">شهريًا</i></span></div>
@@ -431,7 +435,7 @@
         <!-- الأساسية -->
         <article class="plan reveal" data-d="2">
           <div class="plan__head">
-            <span class="plan__tag" data-en="Full management">إدارة كاملة</span>
+            <span class="plan__tag" data-en="Package">باقة</span>
             <h3 data-en="Basic">الأساسية</h3>
             <p class="plan__desc" data-en="Complete HR outsourcing: payroll, employee relations, legal and government affairs.">إسناد كامل للموارد البشرية: الرواتب، علاقات الموظفين، القانونية والشؤون الحكومية.</p>
             <div class="plan__price"><b>3,900</b><span><i data-en="SAR">ر.س</i> / <i data-en="month">شهريًا</i></span></div>
@@ -451,7 +455,7 @@
         <article class="plan plan--featured reveal" data-d="3">
           <span class="plan__ribbon" data-en="Most popular">الأكثر طلبًا</span>
           <div class="plan__head">
-            <span class="plan__tag" data-en="Full management +">إدارة كاملة +</span>
+            <span class="plan__tag" data-en="Package">باقة</span>
             <h3 data-en="Gold">الذهبية</h3>
             <p class="plan__desc" data-en="Everything in Basic, plus extra government platforms and monthly on-site visits.">كل مزايا الأساسية، مع منصات حكومية إضافية وزيارات ميدانية شهرية.</p>
             <div class="plan__price"><b>4,900</b><span><i data-en="SAR">ر.س</i> / <i data-en="month">شهريًا</i></span></div>
@@ -716,7 +720,7 @@
     <div class="footer__top">
       <div class="footer__brand">
         <img src="assets/logo-light.png" alt="HR PATH" width="611" height="192" />
-        <p data-en="Flexible, professional HR solutions. We are HR — but different: full compliance, higher efficiency, lower cost — since 2018.">حلول مرنة واحترافية للموارد البشرية. نحن خبراء الموارد البشرية برؤية تتجاوز المألوف: امتثال كامل، كفاءة أعلى، وتكلفة أقل — منذ 2018.</p>
+        <p data-en="Flexible, professional HR solutions. We are HR — but different: full compliance, higher efficiency, lower cost — since 2016.">حلول مرنة واحترافية للموارد البشرية. نحن خبراء الموارد البشرية برؤية تتجاوز المألوف: امتثال كامل، كفاءة أعلى، وتكلفة أقل — منذ 2016.</p>
         <div class="footer__social">
           <a href="https://x.com/hrpath_sa" target="_blank" rel="noopener" aria-label="X"><svg><use href="#i-x"/></svg></a>
           <a href="https://instagram.com/hrpath_sa" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
@@ -751,7 +755,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <span data-en="© 2026 HR Path — Professional Solutions. All rights reserved.">© 2026 اتش آر باث — حلول احترافية. جميع الحقوق محفوظة.</span>
+      <span data-en="© 2026 Masarat Alimtiaz Company For Human Resources. All rights reserved.">© 2026 شركة مسارات الامتياز للموارد البشرية. جميع الحقوق محفوظة.</span>
       <span data-en="We are HR — But Different">نحن خبراء الموارد البشرية</span>
     </div>
   </div>
@@ -777,7 +781,7 @@
           <li><span class="modal__num">2</span> <span data-en="A specialist contacts you">يتواصل معك مختص</span></li>
           <li><span class="modal__num">3</span> <span data-en="Start within days">ابدأ خلال أيام</span></li>
         </ul>
-        <div class="modal__pill"><svg><use href="#i-shield"/></svg> <span data-en="Full Saudi compliance 🇸🇦">امتثال سعودي كامل 🇸🇦</span></div>
+        <div class="modal__pill"><svg><use href="#i-shield"/></svg> <span data-en="Full Saudi compliance">امتثال سعودي كامل</span></div>
       </aside>
 
       <form class="lead-form modal__form" data-leadform novalidate>

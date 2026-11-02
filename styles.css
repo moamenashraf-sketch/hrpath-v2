@@ -1001,6 +1001,17 @@ html[dir="ltr"] .moeen__title h3 { font-size: clamp(2.8rem, 6.4vw, 5.2rem); }
   .hero--anniv .hero__inner > * { width: 100%; max-width: min(54%, 600px); }
   .hero--anniv .hero__cta { justify-content: flex-start; }
 }
+
+/* Phones: the 10 stands alone above the text; the background behind the text stays calm */
+.hero__ten { display: none; }
 @media (max-width: 860px) {
-  .hero--anniv .hero__bg { object-position: 72% center; }
+  .hero--anniv .hero__ten { display: block; width: min(46%, 170px); height: auto; margin: 0 auto 1rem; }
+  .hero--anniv h1 { margin-block: .2rem 1rem; }
+  .hero--anniv .hero__cta { margin-top: 1.6rem; }
+  .hero--anniv .hero__trust { margin-top: 2rem; }
+  .hero__trust > div + div { border-top-color: rgba(255,255,255,.2); }
 }
+/* icons inside buttons must never be squeezed by a narrow button (the hero arrow became a dot) */
+.btn svg { flex-shrink: 0; }
+/* percent signs sit on the right of the number in Arabic */
+html[dir="rtl"] .stat b .pct { order: -1; }
